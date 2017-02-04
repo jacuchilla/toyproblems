@@ -7,37 +7,45 @@ none points to the root node. */
 
 // First, we create a tree constructor function that will allow us to initialize
 // a new Tree node.
-var Tree = function(value) {
-    var newTree = {};
+let Tree = function(value) {
+    let newTree = {};
     newTree.value = value;
 
     newTree.children = [];
-    // _.extend(newTree, treeMethods);
+    _.extend(newTree, treeMethods);
 
-    console.log('newTree here', newTree)
     return newTree;
 }
 
-var treeMethods = {};
+let treeMethods = {};
 
 
 // We first need to create a method that helps us add a child to the current Tree node.
 treeMethods.addChild = function(value) {
     // First, we instantiate a new tree child
-    var child = Tree(value);
+    let child = Tree(value);
     // Then, we push the new child into the current Trees children array.
     this.children.push(child);
 }
 
-// We then need to create a method that can helps us 
+// This method will allow us to see if how Tree has a specific target value
 treeMethods.contains = function(target) {
+    // This is our base case for the recursive call, it returns true we the tree value is equal to the target value
     if(this.value === target) {
         return true;
     }
+    // This loop allows us to traverse the current Tree nodes childrens 
+    for (let i = 0; i < this.children.length; i++) {
+        // Here, we create a child variable that holds the current node
+        let child = this.children[i];
+        // We then run the contains recursive function on each child, this pops us to the top and checks whether we have the target node...whether the current node has a child/children. 
+        if(child.contains(target)) {
+            return true
+        }
 
+    }
+    return false;
 }
 
-// console.log('hello world!')
-console.log(treeMethods.addChild(4))
 
 
