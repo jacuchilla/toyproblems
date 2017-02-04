@@ -49,9 +49,11 @@ treeMethods.contains = function(target) {
 treeMethods.traverse = function(callback) {
     callback(this.value);
 
+    // If the current tree doesnt have children, we simply return
     if (!this.children) {
         return ;
     }
+    // Else if the tree does have children, we recurse into these children and traverse the tree
     for (let i = 0; i < this.children.length; i++) {
         let child = this.children[i];
         child.traverse(callback);
