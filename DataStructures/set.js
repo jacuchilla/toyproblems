@@ -3,3 +3,9 @@ var Set = function() {
     set._storage = {};
     return set;
 }
+
+var setPrototype = {};
+
+setPrototype.add = function(item) {
+    this._storage[item] = true;
+};
