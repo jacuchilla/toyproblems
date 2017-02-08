@@ -8,4 +8,18 @@ var twoSum = function(nums, target) {
     for (let i = 0; i < nums.length; i++) {
         results[nums[i]] = i
     }
-}
+    for (key in results) {
+      var indexKey = target - key
+      if (indexKey in results && results[indexKey] !== results[key]) {
+        return [results[key], results[indexKey]]
+      }
+    }
+    console.log(results)
+    return "none"
+};
+
+let numss = [2, 7, 11, 15]
+let targets = 9
+// twoSum(numss, targets)
+// twoSum([3,2,4], 6) // [1,2]
+twoSum([0,4,3,0], 0) // [0,3]
