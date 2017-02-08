@@ -3,4 +3,9 @@
 
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
-
+var twoSum = function(nums, target) {
+    let results = {}
+    for (let i = 0; i < nums.length; i++) {
+        results[nums[i]] = i
+    }
+}
