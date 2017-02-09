@@ -7,5 +7,8 @@ graphs indicate the flow direction from vertex to vertex. A path is a sequence
 of vertices in a graph such that all vertices in the path are connected by edges.
 The length of a path is the number of edges from the first vertex in the path 
 to the last vertex. A path can also consist of a vertex to itself, which is 
-called a loop. Loops have a length of 0. 
+called a loop. Loops have a length of 0.
+
+A cycle is a pth with at least one edge whose first and last vertices are the 
+same.  
 */
