@@ -10,5 +10,6 @@ to the last vertex. A path can also consist of a vertex to itself, which is
 called a loop. Loops have a length of 0.
 
 A cycle is a pth with at least one edge whose first and last vertices are the 
-same.  
+same. A simple cycle is one with no repeated edges or vertices for both directed
+and undirected graphs. 
 */
