@@ -11,5 +11,6 @@ called a loop. Loops have a length of 0.
 
 A cycle is a pth with at least one edge whose first and last vertices are the 
 same. A simple cycle is one with no repeated edges or vertices for both directed
-and undirected graphs. 
+and undirected graphs. Paths that repeat other vertices besides the first and  
+last vertices are called gerneral cycles. 
 */
