@@ -18,3 +18,9 @@ last vertices are called gerneral cycles.
 var Graph = function() {
     this.nodes = {};
 }
+
+Graph.prototype.addNode = function(node) {
+    this.nodes[node] = this.nodes[node] || { edges: {} };
+}
+
+
