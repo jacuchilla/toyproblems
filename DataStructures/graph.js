@@ -27,3 +27,18 @@ Graph.prototype.contains = function(node) {
     return !!this.nodes[node];
 }
 
+Graph.prototype.removeNode = function(node) {
+    if (this.contains(node)) {
+        for (var targetNode in this.nodes[node]) {
+            this.removeEdge(node, targetNode);
+        }
+        delete this.nodes[node];
+    }
+}
+
+Graph.prototype.hasEdge = function(fromNode, toNode) {
+    if (!this.contains(fromNode)) {
+        return false;
+    }
+    return !!this.nodes[fromNode].edges[toNode];
+} 
