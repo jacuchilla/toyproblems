@@ -23,6 +23,7 @@ Graph.prototype.addNode = function(node) {
     this.nodes[node] = this.nodes[node] || { edges: {} };
 }
 
+// Return a boolean value indicating if the value passed to contains is represented in the graph.
 Graph.prototype.contains = function(node) {
     return !!this.nodes[node];
 }
