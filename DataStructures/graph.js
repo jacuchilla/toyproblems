@@ -15,6 +15,7 @@ and undirected graphs. Paths that repeat other vertices besides the first and
 last vertices are called gerneral cycles. 
 */
 
+// Instantiate a new graph
 var Graph = function() {
     this.nodes = {};
 }
