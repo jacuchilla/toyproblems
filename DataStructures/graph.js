@@ -14,3 +14,7 @@ same. A simple cycle is one with no repeated edges or vertices for both directed
 and undirected graphs. Paths that repeat other vertices besides the first and  
 last vertices are called gerneral cycles. 
 */
+
+var Graph = function() {
+    this.nodes = {};
+}
